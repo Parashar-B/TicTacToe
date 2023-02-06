@@ -1,0 +1,54 @@
+<html>
+ <head>
+   <link rel="stylesheet" type="text/css" href="tic tac toe.css">
+   <link href="favicon.png" rel="shortcut icon" type="image/x-icon">
+  <script src="tic_tac_toe.js"></script>
+  <title>TIC TAC TOE</title>
+ </head>
+ <body onload="glow()">
+    <div id="heading">
+    <h3>TIC TAC TOE</h3> <!--heading-->
+    <input class="rb" id="fr" type="radio" name="game_mode" value="F" oninput="game_mode(this)" ><img class="im" id="fi" src="per.png">
+    <input class="rb" id="cr" type="radio" name="game_mode" value="C" oninput="game_mode(this)" ><img class="im" id="ci" src="com.png">
+    </div>
+    <!--Score board-->
+    <h1 class="s" id="x">X</h1>
+    <table class="st" id="stx">
+     <tr></tr>
+     <tr><td  class="str" id="scX">0</td></tr>
+    </table>
+   <h1 class="s" id="o">O</h1>
+    <table class="st" id="sto">
+     <tr></tr>
+     <tr><td  class="str" id="scO">0</td></tr>
+    </table>
+    <!--turn indicator-->
+    <label class="t" id="tx">X</label>
+    <label class="t" id="to">O</label>
+    <!--Game Board-->
+    <div class="board">
+    <table id="lt">
+      <tr>
+        <td class="b"><button id="1" onclick="clicked(id)"> </button></td> 
+        <td class="lb"><button id="2" onclick="clicked(id)"></button></td>
+        <td class="lb"><button id="3" onclick="clicked(id)"></button></td>
+      </tr>
+      <tr>
+        <td class="b"><button id="4" onclick="clicked(id)"></button></td>
+        <td class="lb"><button id="5" onclick="clicked(id)"></button></td>
+        <td class="lb" ><button id="6" onclick="clicked(id)"></button></td>
+      </tr>
+      <tr>
+        <td><button id="7" onclick="clicked(id)"></button></td>
+        <td class="l"><button id="8" onclick="clicked(id)"></button></td>
+        <td class="l"><button id="9" onclick="clicked(id)"></button></td>
+     </tr>
+    </table>
+    </div>
+    <!--Result indicator-->
+    <p class="board" id="r"></p>
+    <!--button bellow board-->
+    <button id="swap" onclick="swap()"><img src="s.png"> </button>
+    <button id="pA" onclick="G_reset()">Play Again</button>
+ </body>
+</html>
